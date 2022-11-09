@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>My Portfolio | Giovanni Abel Christian</title>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="home">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top" style="opacity: 90%">
+      <div class="container">
+        <a class="navbar-brand" style="pointer-events: none">Giovanni Abel Christian</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutme">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+    <div class="parallax">
+      <!-- Jumbotron -->
+      <section class="jumbotron text-center">
+        <img src="img/1656345570288.jpg" alt="Giovanni Abel" width="200" class="rounded-circle img-thumbnail" />
+        <h1 class="display-4 lineRight">Giovanni Abel Christian</h1>
+        <p class="lead lineLeft">Data Engineer | Data Scientist | BI Developer</p>
+        <hr class="mx-auto lineUp" style="width: 600px" />
+        <div class="row">
+          <div class="col lineUp">
+            <div class="iconatas mx-auto">
+              <a href="https://www.linkedin.com/in/giovanni-abel-a7145a22b/" target="_blank" style="color: #000; text-decoration: none">
+                <i class="fab fa-linkedin fa-2x fa-fw icons_edit"></i>
+              </a>
+              <!-- <a href="https://github.com/giovanniabel" target="_blank" style="color: #000; text-decoration: none">
+                <i class="fab fa-github fa-2x fa-fw icons_edit"></i>
+              </a> -->
+              <a style="color: #000; text-decoration: none; cursor: pointer" id="logoemail" onclick="show_email()">
+                <i class="fas fa-envelope fa-2x fa-fw icons_edit"></i>
+              </a>
+              <p class="tultip mt-2 fw-semibold" id="ttip" style="opacity: 0; pointer-events: none">giovanniabel@outlook.com</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Akhir Jumbotron -->
+
+      <!-- About -->
+      <section id="about" class="mt-2">
+        <div class="diagonal-box">
+          <div class="content mt-5 pt-5">
+            <div class="container" id="aboutme">
+              <div class="row">
+                <div class="col mt-5">
+                  <h2 class="text-start mt-5">About Me</h2>
+                </div>
+                <div class="col mt-5">
+                  <h2 class="text-end mt-5 mb-1">Languages and Technologies</h2>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-6 fs-5 text-start">
+                  A data engineer with experience in:
+                  <ul>
+                    <li>Handling big data</li>
+                    <li>Machine Learning modelling</li>
+                    <li>Data visualization</li>
+                  </ul>
+                  Passionate in processing data to provide meaningful insights.
+                </div>
+
+                <div class="col-6 mt-4">
+                  <div class="container">
+                    <div class="row text-center mb-3">
+                      <div class="col-sm-3 col-lg-3 align-self-end wrapper">
+                        <img src="img/languages and tech/python.png" class="icontech" style="width: 80%" />
+                        <h5 class="mt-3 texticon">Python</h5>
+                      </div>
+                      <div class="col-sm-3 col-lg-3 align-self-end wrapper">
+                        <img src="img/languages and tech/sql.png" class="icontech" style="width: 80%" />
+                        <h5 class="mt-3 texticon">SQL</h5>
+                      </div>
+                      <div class="col-sm-3 col-lg-3 align-self-end wrapper">
+                        <img src="img/languages and tech/R.png" class="icontech" style="width: 80%" />
+                        <h5 class="mt-3 texticon">R</h5>
+                      </div>
+                      <div class="col-sm-3 col-lg-3 align-self-end wrapper">
+                        <img src="img/languages and tech/powerbi.png" class="icontech" style="width: 80%" />
+                        <h5 class="mt-3 texticon">PowerBI</h5>
+                      </div>
+                    </div>
+
+                    <div class="row mt-2 text-center mb-3">
+                      <div class="col-sm-3 col-lg-3 align-self-end wrapper">
+                        <img src="img/languages and tech/airflow.png" class="icontech" style="width: 80%" />
+                        <h5 class="mt-3 texticon">Airflow</h5>
+                      </div>
+                      <div class="col-sm-3 col-lg-3 align-self-end wrapper">
+                        <img src="img/languages and tech/git.png" class="icontech" style="width: 80%" />
+                        <h5 class="mt-3 texticon">Git</h5>
+                      </div>
+                      <div class="col-sm-3 col-lg-3 align-self-end wrapper">
+                        <img src="img/languages and tech/bigquery.png" class="icontech" style="width: 80%" />
+                        <h5 class="mt-3 texticon">BigQuery</h5>
+                      </div>
+                      <div class="col-sm-3 col-lg-3 align-self-end wrapper">
+                        <img src="img/languages and tech/tensorflow.png" class="icontech" style="width: 80%" />
+                        <h5 class="mt-3 texticon">TensorFlow</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Akhir About -->
+
+      <!-- Projects -->
+      <section id="projects">
+        <div class="container">
+          <div class="row text-center justify-content-center mb-3">
+            <div class="col">
+              <h2 class="mb-3" style="font-size: 50px">My Projects</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <h2 class="text-center mb-4">Data Engineering</h2>
+              <div class="card cardbox">
+                <div style="height: 200px">
+                  <a href="data_eng1.html">
+                    <img src="img/projects/png/guerrillabuzz-crypto-pr-IlUq1ruyv0Q-unsplash.png" class="card-img-top" alt="Project 1" style="height: 100%; filter: grayscale(100%)" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5>Data Files Transfer</h5>
+                  <p class="card-text">Processing the data transfering between platforms, including Google Sheets, Database and Google Drive</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <h2 class="text-center mb-4">Data Science</h2>
+              <div class="card cardbox">
+                <div style="height: 200px">
+                  <a href="ds1.html">
+                    <img src="img/projects/png/jan-huber-ZWH6Wm4rUw4-unsplash.png" class="card-img-top" alt="Project 1" style="height: 100%" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5>Network Bandwidth Prediction</h5>
+                  <p class="card-text">Predicting the bandwidth capacity of telecommunication tower using time-series model</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <h2 class="text-center mb-4">Business Intelligence</h2>
+              <div class="card cardbox">
+                <div style="height: 200px">
+                  <a href="bi1.html">
+                    <img src="img/projects/png/kevin-bonilla-YPfnvLc3bbQ-unsplashedit.png" class="card-img-top" alt="Project 1" style="height: 100%" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5>Car Sales Dashboard</h5>
+                  <p class="card-text">Creating dashboard based on sales report of a car dealership, prodiving insights for business decision</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="card cardbox">
+                <div style="height: 200px">
+                  <a href="data_eng2.html">
+                    <img src="img/projects/png/giorgio-tomassetti-QCbZ4ASLhM8-unsplashedit.png" class="card-img-top" alt="Project 1" style="height: 100%" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5>Weekly Data Aggregation</h5>
+                  <p class="card-text">Transforming various sources of sales order data and aggregating them into weekly-based table</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card cardbox">
+                <div style="height: 200px">
+                  <a href="ds2.html">
+                    <img src="img/projects/png/maemu_unspalsh.png" class="card-img-top" alt="Coffee Demand Prediction" style="height: 100%" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5>Coffee Demand Prediction</h5>
+                  <p class="card-text">Analyzing and Predicting the coffee beans demand of a coffee shop based on internal and external variables</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card cardbox">
+                <div style="height: 200px">
+                  <a href="https://giovanni-abel.shinyapps.io/ProjectDVGiovanniAbel/">
+                    <img src="img/projects/png/fidel-fernando-val59UQ3PqU-unsplash.png" class="card-img-top" alt="Project 1" style="height: 100%" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5>Ramen Classification Dashboard</h5>
+                  <p class="card-text">Data visualization of ramen ratings using R Shiny Dashboard</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="card cardbox">
+                <div style="height: 200px">
+                  <a href="data_eng3.html">
+                    <img src="img/projects/png/chuttersnap-BNBA1h-NgdY-unsplashedit.png" class="card-img-top" alt="Project 1" style="height: 100%; filter: grayscale(100%)" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5>Wholesaler Transaction Structuring</h5>
+                  <p class="card-text">Creating data pipeline of a wholesaler's data to obtain financial insights</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card cardbox">
+                <div style="height: 200px">
+                  <a href="ds3.html">
+                    <img src="img/projects/png/brett-zeck-eyfMgGvo9PA-unsplash.png" class="card-img-top" alt="Coffee Demand Prediction" style="height: 100%" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5>Countries Segmentation</h5>
+                  <p class="card-text">Clustering of countries based on income and life expentancy using K-Means clustering algorithm</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <!-- <div class="card cardbox">
+                <div style="height: 200px">
+                  <img src="img/projects/png/chad-kirchoff-xe-e69j6-Ds-unsplash.png" class="card-img-top" alt="Project 1" style="height: 100%" />
+                </div>
+                <div class="card-body">
+                  <h5>Coming Soon</h5>
+                  <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum incidunt sequi fugit.</p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Akhir Projects -->
+
+      <br />
+      <p class="text-center">Copyright © 2022 Giovanni Abel Christian</p>
+      <br />
+    </div>
+
+    <!-- Footer -->
+    <!-- <footer class="bg-dark text-white text-center pb-2">
+      <div class="container-fluid"> 
+        <div class = "row center">
+        <p>Copyright Giovanni Abel Christian 2022</p>
+      </div>
+      </div>
+    </footer> -->
+
+    <!-- Akhir Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/solid.js" integrity="sha384-/BxOvRagtVDn9dJ+JGCtcofNXgQO/CCCVKdMfL115s3gOgQxWaX/tSq5V8dRgsbc" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/fontawesome.js" integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <!-- <script> 
+    const tooltips = document.querySelectorAll('.tt')
+    tooltips.forEach(t => {
+      new bootstrap.Tooltip(t)
+    })
+      </script> -->
+  </body>
+</html>
