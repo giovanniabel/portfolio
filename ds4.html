@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <title>Sentence Emotion Detection | Giovanni Abel Christian</title>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet" />
+  </head>
+  <body id="home">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top" style="opacity: 90%">
+      <div class="container">
+        <a class="navbar-brand" style="pointer-events: none">Giovanni Abel Christian</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#aboutme">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+    <div class="parallax">
+      <!-- Card -->
+      <section id="card-content" class="mt-2">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="card mx-auto" style="width: 850px">
+                <div class="article mx-5 px-5 mt-5">
+                  <h1 class="d-title">Sentence Emotion Detection</h1>
+                  <hr />
+                  <p>Given a dataset of an Indonesiain short story, this projects aims to create a model that could determine the emotion of a sentence based on the dataset using classification algorithm.</p>
+                  <h3>Methodology</h3>
+                  <img src="img/ds4/ds4_flow_diagram.jpg" alt="Flow Diagram" style="height: 300px; object-fit: contain" class="rounded mx-auto d-block mb-3" />
+                  <p>
+                    The data firstly pre-processed using regex, word steming and stop words. Then, the bag-of-words and TF-IDF were created as the input for the model. There were 2 models created using the same algorithm, one using
+                    Bag-of-Words and the other using TF-IDF.
+                  </p>
+                  <ul>
+                    <li>Dataset: 1000 rows (sentences) with labelled emotion</li>
+                    <li>Model: Multinomial Naive-Bayes using Bag-of-Words and TF-IDF</li>
+                    <li>Data Splitting: train data 80% and test data 20%</li>
+                  </ul>
+                  <h3>Data Exploration</h3>
+                  <p>It is essential to take a look at the dataset and discover label proportoin within the dataset as shown below</p>
+                  <img src="img/ds4/ds4_dataset.png" alt="Data Variables" style="height: 250px; object-fit: contain" class="rounded mx-auto d-block mb-3" />
+                  <img src="img/ds4/proporsi_label.png" alt="Data Proportion" style="height: 300px; object-fit: contain" class="rounded mx-auto d-block mb-3" />
+                  <p>There are 6 emotions contained in the dataset, which are:</p>
+                  <ul>
+                    <li>Happy <i>(senang)</i></li>
+                    <li>Sad <i>(sedih)</i></li>
+                    <li>Surprised <i>(terkejut)</i></li>
+                    <li>Angry <i>(marah)</i></li>
+                    <li>Scared <i>(takut)</i></li>
+                    <li>Disgusted <i>(jijik)</i></li>
+                  </ul>
+                  <h3>Data Pre-processing</h3>
+                  <p>The sentences are preprocessed by:</p>
+                  <ul>
+                    <li><b>Removing digits</b></li>
+                    <p>Using regex function to remove digits</p>
+                    <p>Before:'Jatuhnya Jayakarta ke tangan Kompeni Belanda pada tahun <u>1619 </u> membuat banyak ulama marah.'</p>
+                    <p>After: 'Jatuhnya Jayakarta ke tangan Kompeni Belanda pada tahun membuat banyak ulama marah.'</p>
+                    <li><b>Word stemming</b></li>
+                    <p>Using Indonesian corpus in Sastrawi library to take the word stem</p>
+                    <p>Before:'Jatuhnya Jayakarta ke tangan Kompeni Belanda pada tahun membuat banyak ulama marah.'</p>
+                    <p>After: '<u>jatuh</u> jayakarta ke tangan kompeni belanda pada tahun <u>buat</u> banyak ulama marah'</p>
+                    <li><b>Removing stop Words</b></li>
+                    <p>Using Indonesian corpus in Sastrawi library to remove the stop words</p>
+                    <p>Stopwords in Indonesian includes: 'yang', 'untuk', 'pada', 'ke', 'para', 'namun'</p>
+                  </ul>
+                  <h3>Feature Extraction</h3>
+                  <ul>
+                    <li>Bag-of-Words</li>
+                    <img src="img/ds4/bag_of_words.png" alt="Bag of Words" style="height: 200px; object-fit: contain" class="rounded mx-auto d-block mb-3" />
+                    <li>TF-IDF</li>
+                    <img src="img/ds4/tf_idf.png" alt="TF IDF" style="height: 200px; object-fit: contain" class="rounded mx-auto d-block mb-3" />
+                  </ul>
+                  <h3>Model Training</h3>
+                  <p>The model used is Multinomial Naive Bayes and laplace smoothing is applied to the model.</p>
+                  <div class="row">
+                    <div class="col">
+                      <img src="img/ds4/result_bow.png" alt="Dashboard Prototype" style="height: 220px; object-fit: contain" class="rounded mx-auto d-block mb-3" />
+                    </div>
+                    <div class="col">
+                      <img src="img/ds4/result_tfidf.png" alt="Dashboard Prototype" style="height: 220px; object-fit: contain" class="rounded mx-auto d-block mb-3" />
+                    </div>
+                  </div>
+                  <img src="img/ds4/mnb_model_comparison.png" alt="model metrics" style="height: 140px; object-fit: contain" class="rounded mx-auto d-block mb-3" />
+                  Based on the multinomial NB text classification, it is concluded that: <br />
+                  <ul>
+                    <li>Overally, the model accuracy using Bag-of-words achieved higher accuracy</li>
+                    <li>Laplace helpls in improving the model accuracy as much as 10-11%</li>
+                    <li>Due to unequal label distribution, it causes the model to determine the most frequent label more accurate than the least frequent labels</li>
+                  </ul>
+                  <p>Checkout the source code on <a href="https://github.com/giovanniabel/sent_emot_det">Github</a></p>
+                  <a href="index.html#projects" style="text-decoration: none">
+                    <button class="mx-auto d-block button mb-5 mt-5">
+                      <span class="buttontext">See other projects</span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Akhir Card -->
+
+      <br />
+      <p class="text-center">Copyright © 2022 Giovanni Abel Christian</p>
+      <br />
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

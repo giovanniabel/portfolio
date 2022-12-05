@@ -224,3 +224,12 @@ footer {
     background-color: black;
   }
 }
+
+/* hashtag cardbox */
+
+.hashtags {
+  font-size: 14px;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: left;
+}
