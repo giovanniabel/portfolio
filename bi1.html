@@ -4,25 +4,48 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
     <title>Car Sales Dashboard | Giovanni Abel Christian</title>
 
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:ital,wght@0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body id="home">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top" style="opacity: 90%">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top"
+      style="opacity: 90%"
+    >
       <div class="container">
-        <a class="navbar-brand" style="pointer-events: none">Giovanni Abel Christian</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" style="pointer-events: none"
+          >Giovanni Abel Christian</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="index.html#aboutme">About</a>
@@ -45,34 +68,67 @@
                 <div class="article mx-5 px-5 mt-5">
                   <h1 class="d-title">Car Sales Dashboard</h1>
                   <hr />
-                  <p class="mt-4">The dashboard is based on the customer sales report. The sales report consists of various information in regard to customer profile and transaction detail.</p>
-                  <p>From the report, some of dashboard pages are created in which each page covers a certain topic, which are:</p>
+                  <p class="mt-4">
+                    The dashboard is based on the customer sales report. The
+                    sales report consists of various information in regard to
+                    customer profile and transaction detail.
+                  </p>
+                  <p>
+                    From the report, some of dashboard pages are created in
+                    which each page covers a certain topic, which are:
+                  </p>
                   <ul>
                     <li>Sales Summary</li>
                     <li>Salesperson Performance</li>
                     <li>Showrooms Performance</li>
                     <li>Sales Information Detail</li>
                   </ul>
-                  <img src="img/bi1/sales_summary.png " alt="Weekly Data Aggregation" style="height: 360px; object-fit: contain" class="rounded mx-auto d-block" />
-                  <p style="font-style: italic; font-size: 10px">&emsp;*The values shown are dummy data</p>
+                  <img
+                    src="img/bi1/sales_summary.png "
+                    alt="Weekly Data Aggregation"
+                    style="height: 360px; object-fit: contain"
+                    class="rounded mx-auto d-block"
+                  />
+                  <p style="font-style: italic; font-size: 10px">
+                    &emsp;*The values shown are dummy data
+                  </p>
                   <p class="mt-2">
-                    The above image is the Sales Summary page of the dashboard. Basic information includes graph of sold unit by yearly basis, most car models sold, customer type proportions and bar graph of unit sold by showroom branches.
-                    There are some visualizations that requires measurement using DAX functions such as monthly averge unit sold.
+                    The above image is the Sales Summary page of the dashboard.
+                    Basic information includes graph of sold unit by yearly
+                    basis, most car models sold, customer type proportions and
+                    bar graph of unit sold by showroom branches. There are some
+                    visualizations that requires measurement using DAX functions
+                    such as monthly averge unit sold.
                   </p>
                   <p>
-                    Using the source data and transform it into time-series data, the further analysis about the trend and seasonility are obtained and the forecasting of future values are generated. Therefore, three dashboard pages are
-                    created from seasonal and trend decomposition and forecasted result, that is:
+                    Using the source data and transform it into time-series
+                    data, the further analysis about the trend and seasonility
+                    are obtained and the forecasting of future values are
+                    generated. Therefore, three dashboard pages are created from
+                    seasonal and trend decomposition and forecasted result, that
+                    is:
                   </p>
                   <ul>
                     <li>Seasonality and Trend</li>
                     <li>Car Model Forecasting</li>
                     <li>Showroom Branches Forecasting</li>
                   </ul>
-                  <img src="img/bi1/data_exploration.png" alt="Weekly Data Aggregation" style="height: 360px; object-fit: contain" class="rounded mx-auto d-block mt-3" />
-                  <p style="font-style: italic; font-size: 10px">&emsp;*The values shown are dummy data</p>
+                  <img
+                    src="img/bi1/data_exploration.png"
+                    alt="Weekly Data Aggregation"
+                    style="height: 360px; object-fit: contain"
+                    class="rounded mx-auto d-block mt-3"
+                  />
+                  <p style="font-style: italic; font-size: 10px">
+                    &emsp;*The values shown are dummy data
+                  </p>
                   <p class="mt-2">
-                    The above image shows the Seasonality and Trend dashboard page. The page shows the decomposition of time-series data of based on sales quantity and date. The trend and seasoanility, as well as a short summary on the
-                    right bottom part allow the user to analyze the sales pattern in a particular time of year.
+                    The above image shows the Seasonality and Trend dashboard
+                    page. The page shows the decomposition of time-series data
+                    of based on sales quantity and date. The trend and
+                    seasoanility, as well as a short summary on the right bottom
+                    part allow the user to analyze the sales pattern in a
+                    particular time of year.
                   </p>
                   <a href="index.html#projects" style="text-decoration: none">
                     <button class="mx-auto d-block button mb-5 mt-5">
@@ -92,7 +148,11 @@
       <br />
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
