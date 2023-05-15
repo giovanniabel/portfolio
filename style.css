@@ -55,15 +55,15 @@ footer {
 }
 
 .diagonal-box {
-  height: 40em;
+  height: 50em;
   background-color: #ffffff;
-  transform: skewY(10deg);
+  /* transform: skewY(10deg); */
 }
 
 .content {
   max-width: 100em;
   margin: 0 auto;
-  transform: skewY(-10deg);
+  /* transform: skewY(-10deg); */
 }
 
 .lineRight {
@@ -236,6 +236,6 @@ footer {
 
 @media only screen and (max-width: 600px) {
   body {
-    background-color: lightblue;
+    background-color: #ffffff;
   }
 }
