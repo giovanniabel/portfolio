@@ -235,7 +235,8 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
+  .texticon {
     background-color: #ffffff;
+    font-size: 11px;
   }
 }
