@@ -4,25 +4,48 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
     <title>Countries Segmentation | Giovanni Abel Christian</title>
 
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:ital,wght@0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body id="home">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top" style="opacity: 90%">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top"
+      style="opacity: 90%"
+    >
       <div class="container">
-        <a class="navbar-brand" style="pointer-events: none">Giovanni Abel Christian</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" style="pointer-events: none"
+          >Giovanni Abel Christian</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="index.html#aboutme">About</a>
@@ -45,32 +68,88 @@
                 <div class="article mx-5 px-5 mt-5">
                   <h1 class="d-title">Countries Segmentation</h1>
                   <hr />
-                  <p class="mt-2">Data Source: <a href="https://www.kaggle.com/rohan0301/unsupervised-learning-on-country-data">Here</a></p>
+                  <p class="mt-2">
+                    Data Source:
+                    <a
+                      href="https://www.kaggle.com/rohan0301/unsupervised-learning-on-country-data"
+                      >Here</a
+                    >
+                  </p>
                   <h3>Data Exploration</h3>
-                  <p>This projects aims to classify countries based on its parameters using clustering algorithm. There are several variables in the data, however only two variables are used for the project which are:</p>
+                  <p>
+                    This projects aims to classify countries based on its
+                    parameters using clustering algorithm. There are several
+                    variables in the data, however only two variables are used
+                    for the project which are:
+                  </p>
                   <ul>
                     <li>Income: Net income per person</li>
-                    <li>Life Expectancy: The average number of years a new born child would live</li>
+                    <li>
+                      Life Expectancy: The average number of years a new born
+                      child would live
+                    </li>
                   </ul>
-                  <img src="img/ds3/ds3_data_table.png" alt="Data Variables" style="height: 300px; object-fit: contain" class="rounded mx-auto d-block mb-3" />
-                  <p>It is essential to discover the statistical summary of the variables as shown below</p>
-                  <img src="img/ds3/statistical_summary.png" alt="Data Variables" style="height: 250px; object-fit: contain" class="rounded mx-auto d-block mb-3" />
+                  <img
+                    src="img/ds3/ds3_data_table.png"
+                    alt="Data Variables"
+                    style="height: 300px; object-fit: contain"
+                    class="rounded mx-auto d-block mb-3"
+                  />
+                  <p>
+                    It is essential to discover the statistical summary of the
+                    variables as shown below
+                  </p>
+                  <img
+                    src="img/ds3/statistical_summary.png"
+                    alt="Data Variables"
+                    style="height: 250px; object-fit: contain"
+                    class="rounded mx-auto d-block mb-3"
+                  />
                   <h3>Model Training</h3>
                   <p>
-                    The model used is K-Means Clustering, therefore it is vital to determine the K value (number of groups) by training the models using 1 K to 10 K in which for each K the Within-Cluster Sum of Square (WCSS) value is
-                    calculated then the result is plotted.
+                    The model used is K-Means Clustering, therefore it is vital
+                    to determine the K value (number of groups) by training the
+                    models using 1 K to 10 K in which for each K the
+                    Within-Cluster Sum of Square (WCSS) value is calculated then
+                    the result is plotted.
                   </p>
-                  <img src="img/ds3/elbow method.png" alt="Dashboard Prototype" style="height: 350px; object-fit: contain" class="rounded mx-auto d-block mb-3" />
-                  <p>By using the plotted result of different K value, the best K value is when the next line is flat in other words, when the difference in WCSS is not significant to the next K Value.</p>
+                  <img
+                    src="img/ds3/elbow method.png"
+                    alt="Dashboard Prototype"
+                    style="height: 350px; object-fit: contain"
+                    class="rounded mx-auto d-block mb-3"
+                  />
+                  <p>
+                    By using the plotted result of different K value, the best K
+                    value is when the next line is flat in other words, when the
+                    difference in WCSS is not significant to the next K Value.
+                  </p>
                   <p>The K value of 3 is selected based on the Elbow Method.</p>
-                  <img src="img/ds3/clustering_result.png" alt="Dashboard Prototype" style="height: 420px; object-fit: contain" class="rounded mx-auto d-block mb-3" />
+                  <img
+                    src="img/ds3/clustering_result.png"
+                    alt="Dashboard Prototype"
+                    style="height: 420px; object-fit: contain"
+                    class="rounded mx-auto d-block mb-3"
+                  />
                   <p>Clustering Description</p>
                   <ul>
-                    <li>Cluster 1: Countries with low to high Expectancy and low income</li>
-                    <li>Cluster 2: Countries with high Expectancy and high income</li>
-                    <li>Cluster 3: Countries with low Expectancy and medium income</li>
+                    <li>
+                      Cluster 1: Countries with low to high Expectancy and low
+                      income
+                    </li>
+                    <li>
+                      Cluster 2: Countries with high Expectancy and high income
+                    </li>
+                    <li>
+                      Cluster 3: Countries with low Expectancy and medium income
+                    </li>
                   </ul>
-                  <p>Checkout the source code on <a href="https://github.com/giovanniabel/dsprojects">Github</a></p>
+                  <p>
+                    Checkout the source code on
+                    <a href="https://github.com/giovanniabel/dsprojects"
+                      >Github</a
+                    >
+                  </p>
                   <a href="index.html#projects" style="text-decoration: none">
                     <button class="mx-auto d-block button mb-5 mt-5">
                       <span class="buttontext">See other projects</span>
@@ -85,11 +164,15 @@
       <!-- Akhir Card -->
 
       <br />
-      <p class="text-center">Copyright © 2022 Giovanni Abel Christian</p>
+      <p class="text-center">Copyright © 2023 Giovanni Abel Christian</p>
       <br />
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -4,25 +4,48 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
     <title>Weekly Data Aggregation | Giovanni Abel Christian</title>
 
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:ital,wght@0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body id="home">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top" style="opacity: 90%">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top"
+      style="opacity: 90%"
+    >
       <div class="container">
-        <a class="navbar-brand" style="pointer-events: none">Giovanni Abel Christian</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" style="pointer-events: none"
+          >Giovanni Abel Christian</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="index.html#aboutme">About</a>
@@ -45,25 +68,65 @@
                 <div class="article mx-5 px-5 mt-5">
                   <h1 class="d-title">Weekly Data Aggregation</h1>
                   <hr />
-                  <p class="mt-2">The data source consists of three tables which are:</p>
+                  <p class="mt-2">
+                    The data source consists of three tables which are:
+                  </p>
                   <ul>
-                    <li>Old Order Table: Consist of detailed order data up until October 2021</li>
-                    <li>Order Table: Constantly updated order data starting from October 2021 to present</li>
-                    <li>Store Info Table: Detailed current registered store information</li>
+                    <li>
+                      Old Order Table: Consist of detailed order data up until
+                      October 2021
+                    </li>
+                    <li>
+                      Order Table: Constantly updated order data starting from
+                      October 2021 to present
+                    </li>
+                    <li>
+                      Store Info Table: Detailed current registered store
+                      information
+                    </li>
                   </ul>
-                  <img src="img/data_eng2/table_aggregation.png " alt="Weekly Data Aggregation" style="height: 350px; object-fit: contain" class="rounded mx-auto d-block" />
+                  <img
+                    src="img/data_eng2/table_aggregation.png "
+                    alt="Weekly Data Aggregation"
+                    style="height: 350px; object-fit: contain"
+                    class="rounded mx-auto d-block"
+                  />
                   <p class="mt-2">
-                    Firstly, the Order Table and Store Info Table are joined based on customer's phone number as foreign key to complement the order information. Then, the duplicates and unnecessary fields are removed, subsequently saved as
-                    view. Whereas the Old Order Table has already sufficient store information. Therefore, does not need to be joined with the Store Info Table. Since the Old Order table overlaps with Order Table on October 2021, hence the
-                    order information on October 2021 are filtered out and the transformation is saved in another view.
+                    Firstly, the Order Table and Store Info Table are joined
+                    based on customer's phone number as foreign key to
+                    complement the order information. Then, the duplicates and
+                    unnecessary fields are removed, subsequently saved as view.
+                    Whereas the Old Order Table has already sufficient store
+                    information. Therefore, does not need to be joined with the
+                    Store Info Table. Since the Old Order table overlaps with
+                    Order Table on October 2021, hence the order information on
+                    October 2021 are filtered out and the transformation is
+                    saved in another view.
                   </p>
                   <p class="mt-2">
-                    The next step is to aggregate both views into an aggregated table. Both views are aggregated based on Area, Weekname and Year, and stored as aggregated tables. The Transformed B view is transformed into two different
-                    aggregated tables due to its different method of aggregation and aggregated fields. The aggregated tables are combined and the final output is depicted on the table below.
+                    The next step is to aggregate both views into an aggregated
+                    table. Both views are aggregated based on Area, Weekname and
+                    Year, and stored as aggregated tables. The Transformed B
+                    view is transformed into two different aggregated tables due
+                    to its different method of aggregation and aggregated
+                    fields. The aggregated tables are combined and the final
+                    output is depicted on the table below.
                   </p>
-                  <img src="img/data_eng2/final_output.png" alt="Weekly Data Aggregation" style="height: 200px; object-fit: contain" class="rounded mx-auto d-block mt-3" />
-                  <p style="font-style: italic; font-size: 10px">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*The values shown are dummy data</p>
-                  <p>Additionaly a row which sum up the values of the whole Area based on each unique combination of year and weekname is added.</p>
+                  <img
+                    src="img/data_eng2/final_output.png"
+                    alt="Weekly Data Aggregation"
+                    style="height: 200px; object-fit: contain"
+                    class="rounded mx-auto d-block mt-3"
+                  />
+                  <p style="font-style: italic; font-size: 10px">
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*The values
+                    shown are dummy data
+                  </p>
+                  <p>
+                    Additionaly a row which sum up the values of the whole Area
+                    based on each unique combination of year and weekname is
+                    added.
+                  </p>
                   <a href="index.html#projects" style="text-decoration: none">
                     <button class="mx-auto d-block button mb-5 mt-5">
                       <span class="buttontext">See other projects</span>
@@ -78,11 +141,15 @@
       <!-- Akhir Card -->
 
       <br />
-      <p class="text-center">Copyright © 2022 Giovanni Abel Christian</p>
+      <p class="text-center">Copyright © 2023 Giovanni Abel Christian</p>
       <br />
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
