@@ -55,7 +55,8 @@ footer {
 }
 
 .diagonal-box {
-  height: 50em;
+  height: 40em;
+  max-height: 90vh;
   background-color: #ffffff;
   /* transform: skewY(10deg); */
 }
@@ -234,9 +235,13 @@ footer {
   text-align: left;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .texticon {
     background-color: #ffffff;
     font-size: 13px;
   }
+  .gambar_alur {
+    width: 75vw;
+  }
 }
+
